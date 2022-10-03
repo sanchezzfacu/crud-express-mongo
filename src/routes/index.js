@@ -6,7 +6,7 @@ const model = require('../model/task')()
 router.get('/', (req,res) => {
     model.find({}, (err, tasks) => {
         if(err) throw err;
-        res.render('index', {
+        res.render('index', { 
             title: 'CRUD',
             task: tasks
         })
